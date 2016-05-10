@@ -1,0 +1,11 @@
+<h1>All Resumes</h1>
+
+<% @resumes.each do |resume| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <p><%= link_to resume.name, resume %></p>
+      </h4>
+    </div>
+  </div>
+<% end %>

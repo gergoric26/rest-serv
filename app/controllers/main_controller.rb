@@ -1,4 +1,8 @@
 class MainController < ApplicationController
-  def index
+  def about
+  end
+
+  def all_resumes
+    
   end
 end
