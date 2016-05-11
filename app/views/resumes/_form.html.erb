@@ -1,0 +1,45 @@
+<%= form_for @resume do |f| %>  
+
+
+    <%= f.label :full_name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your full name" %>
+
+</br>
+
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control', placeholder: "Enter your email" %>
+
+
+
+    <%= f.label :phone_number %>
+    <%= f.text_field :p_number, class: 'form-control', placeholder: "Enter your phone number" %>
+
+
+
+    <%= f.label :position %>
+    <%= f.text_field :position, class: 'form-control', placeholder: "Enter your position" %>
+
+</br>
+
+    <%= f.label :cover_letter %>
+    <%= f.text_area :cover, rows: 8, class: 'form-control', placeholder: "Enter your cover letter" %>
+
+
+
+    <%= f.label :resume %>
+    <%= f.text_field :resume, class: 'form-control', placeholder: "Enter your resume" %>
+
+
+
+    <%= f.label :reference %>
+    <%= f.text_area :reference, rows: 4, class: 'form-control', placeholder: "Enter your reference" %>
+
+
+</br>
+
+
+  <div class="form-group">
+    <%= f.submit "submit", class: 'btn btn-success' %>
+  </div>
+
+<% end %>

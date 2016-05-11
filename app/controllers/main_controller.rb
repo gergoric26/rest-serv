@@ -3,6 +3,6 @@ class MainController < ApplicationController
   end
 
   def all_resumes
-    
+    @resumes = Resume.all
   end
 end

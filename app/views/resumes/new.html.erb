@@ -1,2 +1,11 @@
-<h1>Resumes#new</h1>
-<p>Find me in app/views/resumes/new.html.erb</p>
+<h1>New Resumes</h1>
+
+</br>
+
+<div class="row">
+  <div class="col-md-6">
+    
+    <%= render partial: 'form', locals: { resume: @resume } %>
+    
+  </div>
+</div>
