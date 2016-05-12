@@ -1,2 +1,22 @@
-<h1>Resumes#show</h1>
-<p>Find me in app/views/resumes/show.html.erb</p>
+<h1>
+  <%= @resume.name %> - <%= @resume.position %> <br>
+  <small>
+    submitted <%= time_ago_in_words(@resume.created_at) %>
+  </small>
+</h1>
+
+<h3><%= @resume.email %> || <%= @resume.p_number %></h3>
+
+<br>
+
+<p><%= @resume.cover %></p>
+
+<br>
+
+<p><%= @resume.resume %></p>
+
+<br>
+
+<p><%= @resume.reference %></p>
+
+<br>
