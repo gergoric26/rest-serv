@@ -16,6 +16,10 @@ end
 
 #3
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "paperclip", "~> 5.0.0.beta1"
+
+
+
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
