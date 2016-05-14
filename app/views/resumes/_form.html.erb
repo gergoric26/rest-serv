@@ -1,4 +1,4 @@
-<%= form_for @resume do |f| %>  
+<%= form_for @resume, html: { multipart: true } do |f| %>  
 
 
     <%= f.label :full_name %>
@@ -7,29 +7,29 @@
 </br>
 
     <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control', placeholder: "Enter your email" %>
+    <%= f.text_field :email, class: 'form-control', placeholder: "example@example.com" %>
 
 
 
     <%= f.label :phone_number %>
-    <%= f.text_field :p_number, class: 'form-control', placeholder: "Enter your phone number" %>
+    <%= f.text_field :p_number, class: 'form-control', placeholder: "111-111-1111" %>
 
 
 
     <%= f.label :position %>
-    <%= f.text_field :position, class: 'form-control', placeholder: "Enter your position" %>
+    <%= f.text_field :position, class: 'form-control', placeholder: "server/busboy/runner..." %>
 
 </br>
 
     <%= f.label :cover_letter %>
     <%= f.text_area :cover, rows: 8, class: 'form-control', placeholder: "Enter your cover letter" %>
 
+</br>
 
+    <%= f.label :resume %></br><small>Best file to use!(.pdf, .png, .jpg)</small>
+    <%= f.file_field :document, class: 'form-control', placeholder: "Best file to use!(.pdf, .png, .jpg)" %>
 
-    <%= f.label :resume %>
-    <%= f.file_field :resume, class: 'form-control', placeholder: "Enter your resume" %>
-
-
+</br>
 
     <%= f.label :reference %>
     <%= f.text_area :reference, rows: 4, class: 'form-control', placeholder: "Enter your reference" %>

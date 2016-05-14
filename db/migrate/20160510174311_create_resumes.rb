@@ -6,7 +6,7 @@ class CreateResumes < ActiveRecord::Migration
       t.string :p_number
       t.string :position
       t.text :cover
-      t.string :resume
+      
       t.text :reference
 
       t.timestamps null: false
