@@ -1,22 +1,32 @@
 <h1>
-  <%= @resume.name %> - <%= @resume.position %> <br>
+  <%= @resume.name %> - <%= @resume.position %>
   <small>
     submitted <%= time_ago_in_words(@resume.created_at) %>
   </small>
 </h1>
 
-<h3><%= @resume.email %> || <%= @resume.p_number %></h3>
+<br>
+
+<h4><%= @resume.email %> || <%= @resume.p_number %></h4>
 
 <br>
 
-<p><%= @resume.cover %></p>
+<div class="row">
+  <div class="col-md-8">
+    <h3>Cover letter:</h3>
+    <p><%= simple_format @resume.cover %></p>
+  </div>
+</div>
 
 <br>
 
-<p><%= @resume.resume %></p>
+<h3><%= link_to "Show Resume", @resume.document.url, target: "_blank" %></h3>
 
 <br>
+<div class="row">
+  <div class="col-md-8">
+    <h3>References:</h3>
+    <p><%= simple_format @resume.reference %></p>
+  </div>
+</div>
 
-<p><%= @resume.reference %></p>
-
-<br>

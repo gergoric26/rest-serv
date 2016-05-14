@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510174311) do
+ActiveRecord::Schema.define(version: 20160514144954) do
 
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
@@ -19,10 +19,13 @@ ActiveRecord::Schema.define(version: 20160510174311) do
     t.string   "p_number"
     t.string   "position"
     t.text     "cover"
-    t.string   "resume"
     t.text     "reference"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
 end
