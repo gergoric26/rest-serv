@@ -1,6 +1,7 @@
 class ResumesController < ApplicationController
   def index
     @resumes = Resume.all
+    # @resumes = Resume.where(created_at: 30.days.ago..Time.now)
   end
 
   def show
