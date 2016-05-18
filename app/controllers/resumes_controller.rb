@@ -1,6 +1,11 @@
 class ResumesController < ApplicationController
+  
+  before_filter :authenticate_user!, only: [:index, :edit, :new, :destroy]
+
   def index
-    @resumes = Resume.all
+    @user = User.find(params[:user_id])
+    @resumes = @user.resumes
+    # @resumes = Resume.all
     # @resumes = Resume.where(created_at: 30.days.ago..Time.now)
   end
 
@@ -14,6 +19,7 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.new(resume_params)
+    @resume.user = current_user
 
     if @resume.save
       redirect_to @resume, notice: "Resume was created!"
@@ -55,6 +61,6 @@ class ResumesController < ApplicationController
   private
 
   def resume_params
-    params.require(:resume).permit(:name, :email, :p_number, :position, :cover, :document, :reference)
+    params.require(:resume).permit(:name, :email, :p_number, :position, :cover, :document, :reference, :user_id)
   end
 end
