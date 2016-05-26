@@ -22,7 +22,7 @@ class ResumesController < ApplicationController
     @resume.user = current_user
 
     if @resume.save
-      redirect_to @resume, notice: "Resume was created!"
+      redirect_to main_all_resumes_path, notice: "Resume was created!"
     else
       flash[:error] = "Something went wrong!"
       render :new
