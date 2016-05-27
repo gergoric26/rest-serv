@@ -1,37 +1,37 @@
 <%= form_for @resume, html: { multipart: true } do |f| %>  
 
 
-    <%= f.label :full_name %>
+    <p><%= f.label :full_name %>*</p>
     <%= f.text_field :name, class: 'form-control', placeholder: "Enter your full name" %>
 
 </br>
 
-    <%= f.label :email %>
+    <p><%= f.label :email %>*</p>
     <%= f.text_field :email, class: 'form-control', placeholder: "example@example.com" %>
 
+</br>
 
-
-    <%= f.label :phone_number %>
+    <p><%= f.label :phone_number %>*</p>
     <%= f.text_field :p_number, class: 'form-control', placeholder: "111-111-1111" %>
 
+</br>
 
-
-    <%= f.label :position %>
+    <p><%= f.label :position %>*</p>
     <%= f.text_field :position, class: 'form-control', placeholder: "server/busboy/runner..." %>
 
 </br>
 
-    <%= f.label :cover_letter %>
+    <p><%= f.label :cover_letter %></p>
     <%= f.text_area :cover, rows: 8, class: 'form-control', placeholder: "Enter your cover letter" %>
 
 </br>
 
-    <%= f.label :resume %></br><small>Best file to use!(.pdf, .png, .jpg)</small>
+    <p><%= f.label :resume %>*</p><small>Best file to use!(.pdf, .png, .jpg)</small>
     <%= f.file_field :document, class: 'form-control', placeholder: "Best file to use!(.pdf, .png, .jpg)" %>
 
 </br>
 
-    <%= f.label :reference %>
+    <p><%= f.label :reference %>*</p>
     <%= f.text_area :reference, rows: 4, class: 'form-control', placeholder: "Enter your reference" %>
 
 
