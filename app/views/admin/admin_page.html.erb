@@ -1,0 +1,23 @@
+<h1>Admin page</h1>
+
+</br>
+
+<% @resumes.each do |resume| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <div class="row">
+          <p>
+            <div class="col-md-8">
+              <%= link_to resume.name, resume %>
+            </div>
+            <div class="col-md-4">
+              <%= link_to "Edit Resume", edit_resume_path(resume), class: 'btn btn-info' %>
+              <%= link_to "Delete Resume", [resume], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this resume?' } %>
+            </div>
+          </p>
+        </div>
+      </h4>
+    </div>
+  </div>
+<% end %>
