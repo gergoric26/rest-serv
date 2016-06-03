@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'admin/admin_page'
+
   devise_for :users
 
   resources :users, only: [:index] do
