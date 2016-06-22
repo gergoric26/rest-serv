@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   
-  before_filter :authenticate_user!, only: [:index, :edit, :new, :destroy]
+  before_filter :authenticate!, only: [:index, :edit, :new, :destroy]
 
   def index
     @user = User.find(params[:user_id])
@@ -22,7 +22,7 @@ class ResumesController < ApplicationController
     @resume.user = current_user
 
     if @resume.save
-      redirect_to main_all_resumes_path, notice: "Resume was created!"
+      redirect_to @resume, notice: "Resume was created!"
     else
       flash[:error] = "Something went wrong!"
       render :new
